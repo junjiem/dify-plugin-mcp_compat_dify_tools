@@ -1,0 +1,84 @@
+## Dify 1.0 Plugin Convert your Dify tools's API to MCP compatible API
+
+**Author:** [Junjie.M](https://github.com/junjiem)   
+**Type:** extension   
+**Github Repo:** [https://github.com/junjiem/dify-plugin-mcp_compat_dify_tools](https://github.com/junjiem/dify-plugin-mcp_compat_dify_tools)   
+**Github Issues:** [issues](https://github.com/junjiem/dify-plugin-mcp_compat_dify_tools/issues)  
+
+
+---
+
+
+### Description
+
+
+Convert your Dify tools's API to MCP compatible API
+
+将您的 Dify 工具的 API 转换为 MCP 兼容 API
+
+#### 1. Add a endpoint and add tool list. 添加API端点并添加工具列表。
+
+![add_endpoint](./_assets/add_endpoint.png)
+
+![add_tool_list](./_assets/add_tool_list.png)
+
+![edit_tool](./_assets/edit_tool.png)
+
+![save_endpoint](./_assets/save_endpoint.png)
+
+> **Note:**
+> 
+> 1. Because the Dify platform does not transmit the LLM description of the tool, it is recommended to manually set the tool description when adding the tool. 
+> (Currently, the tool label is automatically used as the tool description if no tool description is set.)
+> 
+> 2. The modification of the tool list for existing endpoint will take effect only after the endpoint are disabled and then enabled.
+> 
+
+
+> **注：**
+> 
+> 1、由于 Dify 平台没有将工具的LLM描述传递，所以在添加工具时建议手动设置工具描述。（目前对于未设置工具描述的自动将工具标签作为工具描述。）
+> 
+> 2、对已有 API 端点进行工具列表的修改需要停用再启用 API 端点后才会生效。
+> 
+
+
+#### 2. copy the endpoint url to your mcp client, like `Cherry Studio` 复制端点url到您的mcp客户端，如 `Cherry Studio`
+
+![cherry_studio_mcp_sse](./_assets/cherry_studio_mcp_sse.png)
+
+OK!
+
+
+
+---
+
+
+
+### Installing Plugins via GitHub  通过 GitHub 安装插件
+
+Can install the plugin using the GitHub repository address. Visit the Dify platform's plugin management page, choose to install via GitHub, enter the repository address, select version number and package file to complete installation.
+
+可以通过 GitHub 仓库地址安装该插件。访问 Dify 平台的插件管理页，选择通过 GitHub 安装插件，输入仓库地址后，选择版本号和包文件完成安装。
+
+![install_plugin_via_github](_assets/install_plugin_via_github.png)
+
+
+
+---
+
+
+
+### FAQ
+
+#### How to Handle Errors When Installing Plugins? 安装插件时遇到异常应如何处理？
+
+**Issue**: If you encounter the error message: plugin verification has been enabled, and the plugin you want to install has a bad signature, how to handle the issue?
+
+**Solution**: Add the following line to the end of your .env configuration file: FORCE_VERIFYING_SIGNATURE=false
+Once this field is added, the Dify platform will allow the installation of all plugins that are not listed (and thus not verified) in the Dify Marketplace.
+
+**问题描述**：安装插件时遇到异常信息：plugin verification has been enabled, and the plugin you want to install has a bad signature，应该如何处理？
+
+**解决办法**：在 .env 配置文件的末尾添加 FORCE_VERIFYING_SIGNATURE=false 字段即可解决该问题。
+添加该字段后，Dify 平台将允许安装所有未在 Dify Marketplace 上架（审核）的插件，可能存在安全隐患。

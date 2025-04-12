@@ -1,0 +1,5 @@
+path: "/messages/"
+method: "POST"
+extra:
+  python:
+    source: "endpoints/messages.py"

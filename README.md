@@ -6,6 +6,9 @@
 **Github Issues:** [issues](https://github.com/junjiem/dify-plugin-mcp_compat_dify_tools/issues)  
 
 
+Reference to https://github.com/hjlarry/dify-plugin-mcp_server
+
+
 ---
 
 

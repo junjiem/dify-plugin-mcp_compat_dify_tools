@@ -46,11 +46,13 @@ Convert your Dify tools's API to MCP compatible API
 > 
 
 
-#### 2. copy the endpoint url to your mcp client, like `Cherry Studio` 复制端点url到您的mcp客户端，如 `Cherry Studio`
+#### 2. Copy the endpoint url to your MCP client, like `Cherry Studio` 复制端点url到您的MCP客户端，如 `Cherry Studio`
+
+![mcp_sse_url](./_assets/mcp_sse_url.png)
 
 ![cherry_studio_mcp_sse](./_assets/cherry_studio_mcp_sse.png)
 
-OK!
+**OK!**
 
 
 

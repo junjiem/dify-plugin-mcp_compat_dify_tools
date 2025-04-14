@@ -129,6 +129,7 @@ class MessageEndpoint(Endpoint):
         value = [tool for tool in value if tool.get("enabled", False)]
 
         for tool in value:
+            type = tool["type"]
             tool_name = tool["tool_name"]
             tool_label = tool["tool_label"]
             extra_description = tool.get("extra").get("description", None)
@@ -149,6 +150,12 @@ class MessageEndpoint(Endpoint):
                 llm=llm_description,
             )
 
+            provider_type = ToolProviderType.BUILT_IN
+            if type == "api":
+                provider_type = ToolProviderType.API
+            elif type == "workflow":
+                provider_type = ToolProviderType.WORKFLOW
+
             parameters = []
             for schema in schemas:
                 parameters.append(ToolParameter(**schema))
@@ -161,6 +168,7 @@ class MessageEndpoint(Endpoint):
                 identity=identity,
                 parameters=parameters,
                 description=description,
+                provider_type=provider_type,
                 runtime_parameters=runtime_parameters,
             )
 

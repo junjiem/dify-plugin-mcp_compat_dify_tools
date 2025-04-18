@@ -1,0 +1,5 @@
+path: "/mcp"
+method: "GET"
+extra:
+  python:
+    source: "endpoints/mcp_get.py"

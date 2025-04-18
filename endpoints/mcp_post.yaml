@@ -1,0 +1,5 @@
+path: "/mcp"
+method: "POST"
+extra:
+  python:
+    source: "endpoints/mcp_post.py"

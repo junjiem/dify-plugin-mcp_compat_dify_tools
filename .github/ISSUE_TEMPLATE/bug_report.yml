@@ -21,6 +21,16 @@ body:
       label: "Plugin version 插件版本"
     validations:
       required: true
+  - type: dropdown
+    attributes:
+      label: HTTP with SSE or Streamable HTTP
+      description: Which transports? 哪种传输？
+      multiple: true
+      options:
+        - HTTP with SSE
+        - Streamable HTTP
+    validations:
+      required: true
   - type: textarea
     attributes:
       label: "Problem description 问题描述"

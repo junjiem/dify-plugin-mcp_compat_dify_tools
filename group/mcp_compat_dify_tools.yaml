@@ -8,3 +8,5 @@ settings:
 endpoints:
   - endpoints/sse.yaml
   - endpoints/messages.yaml
+  - endpoints/mcp_get.yaml
+  - endpoints/mcp_post.yaml

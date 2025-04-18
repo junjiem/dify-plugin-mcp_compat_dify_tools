@@ -6,8 +6,8 @@ label:
   en_US: MCP Compatible Dify Tools
   zh_Hans: MCP Compatible Dify Tools
 description:
-  en_US: Convert your Dify tools's API to MCP compatible API
-  zh_Hans: 将您的Dify工具的API转换为MCP兼容API
+  en_US: "Convert your Dify tools's API to MCP compatible API (Note: must dify 1.2.0+)"
+  zh_Hans: 将您的Dify工具的API转换为MCP兼容API（注：必须 dify 1.2.0+）
 icon: icon.svg
 resource:
   memory: 268435456

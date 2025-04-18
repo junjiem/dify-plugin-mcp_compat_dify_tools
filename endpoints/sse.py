@@ -35,4 +35,4 @@ class SSEEndpoint(Endpoint):
                 self.session.storage.delete(session_id)
                 yield create_sse_message("message", message)
 
-        return Response(generate(), status=200, content_type='text/event-stream')
+        return Response(generate(), status=200, content_type="text/event-stream")

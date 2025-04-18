@@ -44,7 +44,7 @@ class MessageEndpoint(Endpoint):
                     },
                     "serverInfo": {
                         "name": "MCP Compatible Dify Tools",
-                        "version": "1.3.0"
+                        "version": "1.0.0"
                     }
                 }
             }
@@ -129,10 +129,11 @@ class MessageEndpoint(Endpoint):
         value = [tool for tool in value if tool.get("enabled", False)]
 
         for tool in value:
-            type = tool["type"]
+            tool_type = tool["type"]
             tool_name = tool["tool_name"]
             tool_label = tool["tool_label"]
-            extra_description = tool.get("extra").get("description", None)
+            tool_description = tool.get("tool_description", None)
+            extra_description = tool.get("extra", {}).get("description", None)
             provider_name = tool["provider_name"]
             schemas = tool.get("schemas", [])
             settings = tool.get("settings", {})
@@ -144,16 +145,20 @@ class MessageEndpoint(Endpoint):
                 provider=provider_name,
             )
 
-            llm_description = extra_description if extra_description else tool_label
+            llm_description = (
+                extra_description
+                if extra_description else tool_description
+                if tool_description else tool_label
+            )
             description = ToolDescription(
                 human=I18nObject(en_US=llm_description),
                 llm=llm_description,
             )
 
             provider_type = ToolProviderType.BUILT_IN
-            if type == "api":
+            if tool_type == "api":
                 provider_type = ToolProviderType.API
-            elif type == "workflow":
+            elif tool_type == "workflow":
                 provider_type = ToolProviderType.WORKFLOW
 
             parameters = []

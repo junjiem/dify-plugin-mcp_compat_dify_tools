@@ -18,9 +18,10 @@ Reference to https://github.com/hjlarry/dify-plugin-mcp_server
 
 > **注:** 必须是 dify 1.2.0及以上版本。
 
-Convert your Dify tools's API to MCP compatible API
+Convert your Dify tools's API to MCP compatible API (Currently, two communication methods are supported: HTTP with SSE and Streamable HTTP)
 
-将您的 Dify 工具的 API 转换为 MCP 兼容 API
+将您的 Dify 工具的 API 转换为 MCP 兼容 API (目前已支持 HTTP with SSE 和 Streamable HTTP 两种通信方式)
+
 
 #### 1. Add a endpoint and add tool list. 添加API端点并添加工具列表。
 
@@ -33,23 +34,32 @@ Convert your Dify tools's API to MCP compatible API
 ![save_endpoint](./_assets/save_endpoint.png)
 
 > **Note:**
-> 
-> 1. Because the Dify platform does not transmit the LLM description of the tool, it is recommended to manually set the tool description when adding the tool. 
-> (Currently, the tool label is automatically used as the tool description if no tool description is set.)
-> 
-> 2. The modification of the tool list for existing endpoint will take effect only after the endpoint are disabled and then enabled.
+>
+> 1. The modification of the tool list for existing endpoint will take effect only after the endpoint are disabled and then enabled.
 > 
 
 
 > **注：**
-> 
-> 1、由于 Dify 平台没有将工具的LLM描述传递，所以在添加工具时建议手动设置工具描述。（目前对于未设置工具描述的自动将工具标签作为工具描述。）
-> 
-> 2、对已有 API 端点进行工具列表的修改需要停用再启用 API 端点后才会生效。
+>
+> 1. 对已有 API 端点进行工具列表的修改需要停用再启用 API 端点后才会生效。
 > 
 
 
-#### 2. Copy the endpoint url to your MCP client, like `Cherry Studio` 复制端点url到您的MCP客户端，如 `Cherry Studio`
+#### 2. Copy the endpoint url to your MCP client, like `Cherry Studio`  复制端点url到您的MCP客户端，如 `Cherry Studio`
+
+![mcp_urls](./_assets/mcp_urls.png)
+
+
+##### **Option 1:** Use the newest `Streamable HTTP` transport (**Recommended**)  使用最新的`Streamable HTTP`传输方式（**推荐**）
+
+![mcp_streamable_http_url](./_assets/mcp_streamable_http_url.png)
+
+![cherry_studio_mcp_streamable_http](./_assets/cherry_studio_mcp_streamable_http.png)
+
+**OK!**
+
+
+##### **Option 2:** Use the legacy `HTTP with SSE` transport  使用过时的`HTTP with SSE`传输方式
 
 ![mcp_sse_url](./_assets/mcp_sse_url.png)
 

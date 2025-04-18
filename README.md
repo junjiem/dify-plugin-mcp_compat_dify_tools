@@ -18,9 +18,9 @@ Reference to https://github.com/hjlarry/dify-plugin-mcp_server
 
 > **注:** 必须是 dify 1.2.0及以上版本。
 
-Convert your Dify tools's API to MCP compatible API (Currently, two communication methods are supported: HTTP with SSE and Streamable HTTP)
+Convert your Dify tools's API to MCP compatible API (**Currently, two transports are supported: `HTTP with SSE` and `Streamable HTTP`**)
 
-将您的 Dify 工具的 API 转换为 MCP 兼容 API (目前已支持 HTTP with SSE 和 Streamable HTTP 两种通信方式)
+将您的 Dify 工具的 API 转换为 MCP 兼容 API (**目前已支持 `HTTP with SSE` 和 `Streamable HTTP` 两种传输方式**)
 
 
 #### 1. Add a endpoint and add tool list. 添加API端点并添加工具列表。

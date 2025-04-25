@@ -33,16 +33,9 @@ Convert your Dify tools's API to MCP compatible API (**Currently, two transports
 
 ![save_endpoint](./_assets/save_endpoint.png)
 
-> **Note:**
->
-> 1. The modification of the tool list for existing endpoint will take effect only after the endpoint are disabled and then enabled.
-> 
+> **Note:** The modification of the tool list for existing endpoint will take effect only after the endpoint are disabled and then enabled.
 
-
-> **注：**
->
-> 1. 对已有 API 端点进行工具列表的修改需要停用再启用 API 端点后才会生效。
-> 
+> **注：** 对已有 API 端点进行工具列表的修改需要停用再启用 API 端点后才会生效。
 
 
 #### 2. Copy the endpoint url to your MCP client, like `Cherry Studio`  复制端点url到您的MCP客户端，如 `Cherry Studio`

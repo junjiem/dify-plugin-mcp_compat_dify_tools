@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/junjiem-dify-plugin-mcp-compat-dify-tools-badge.png)](https://mseep.ai/app/junjiem-dify-plugin-mcp-compat-dify-tools)
+
 ## Dify 1.0 Plugin Convert your Dify tools's API to MCP compatible API
 
 **Author:** [Junjie.M](https://github.com/junjiem)   
